@@ -7,6 +7,100 @@ and open the template in the editor.
     Created on : Apr 27, 2015, 4:11:50 PM
     Author     : Stephen
 */
-div{
-    background-color: cadetblue;
+#main{
+    background-color: black;
+    width: 80%;
+    margin:auto;
+    border: 5px solid brown;
+    border-radius: 15px;
+     font-family:"Lucida Console", Monaco, monospace;
+    
+}
+.bold{
+    font-weight: bold;
+}
+ul{
+   
+    font-size: 16pt;
+}
+.left{
+    margin-left:-5%;
+}
+table{
+    width: 100%;
+    
+   
+   
+}
+#left{
+    text-align:left;
+    width:50%;
+}
+td{
+    width:33%;
+     text-align: center;
+}
+#card{
+    border: 1pt solid cornsilk;
+}
+.right{
+    
+    margin-right:-5%;
+}
+.head{
+    width:100%;
+  
+    margin:auto;
+      margin-left: 5%;
+    background-color:burlywood;
+   
+}
+.odd{
+      width:80%;
+  border:1pt solid cornsilk;
+    margin:auto;
+    background-color:burlywood;
+    text-align:center;
+    border-radius: 5px;
+     font-family:"Lucida Console", Monaco, monospace;
+     font-size:20pt;
+    
+}
+#compass{
+    display:block;
+    margin:auto;
+}
+#heading{
+    color: burlywood;
+    text-align: center;
+}
+.even{
+     width:80%;
+    margin:auto;
+    background-color:moccasin;
+    border:1pt solid cornsilk;
+    text-align:center;
+     border-radius: 5px;
+      font-family:"Lucida Console", Monaco, monospace;
+      font-size:20pt;
+    
+}
+
+body{
+    background-color:darkolivegreen;
+}
+.me{
+  
+    width:100%;
+    margin:auto;
+    margin-left:-5%;
+    background-color:moccasin;
+}
+
+#banner{
+    display:block;
+    margin:auto;
+    width:80%;
+  
+    
 }
