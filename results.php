@@ -14,7 +14,7 @@ if(!isset($_COOKIE["taken"])){
 }else{
     echo "already taken the survey";
 }
-$tally = array('Gryfindor', 'Hufflepuff', 'Ravenclaw' ,'Slytherin',
+$tally = array('Gryffindor', 'Hufflepuff', 'Ravenclaw' ,'Slytherin',
 'Dwarf','Hobbit','Human','Elf','Orc','Uruk-Hai',
 'Qui-gon Jinn','Yoda','Mace Windu','Luke Skywalker', 'Anakin Skywalker', 'Obi-wan Kenobi',
 'Loki','Magento','Emperor Palpatine','Voldemort','Sauron','The Joker');
