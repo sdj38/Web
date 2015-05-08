@@ -57,7 +57,9 @@ if($file){
 	
 echo " <div id='main'> <h1> Results </h1><div class='answer'><table> ";
     foreach($tally as $key => $value){
-	echo "<tr><td>$key</td><td>$value</td></tr>";
+        if(!$value == 0){
+            echo "<tr><td>$key</td><td>$value</td></tr>";
+        }       
 	if($key === "Slytherin" || $key === "Uruk-Hai" ||$key === "Obi-wan Kenobi"){
             echo "</table></div><br /><div class='answer'><table>";
 	}
