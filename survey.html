@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>Questionairre!</title>
+        <link rel="stylesheet" href="survey_style.css">
+    </head>
+    <body>
+	<div id="main">
+            <h1> Questions of the mind </h1>
+            <form action="results.php" method="POST">
+                <div id="HP" class="question">
+                    <table>
+			<tr><th colspan="2">1. Which house would you belong to at Hogwarts? </th></tr>
+			<tr><td>Gryffindor</td><td>
+                        <input type="radio" name="house" value="Gryffindor" /></td></tr>
+			<tr><td>Hufflepuff</td><td>
+			<input type ="radio" name="house" value="Hufflepuff" /></td></tr>
+			<tr><td>Ravenclaw</td><td>
+			<input type ="radio" name="house" value="Ravenclaw" /></td></tr>
+			<tr><td>Slytherin</td><td>
+			<input type = "radio" name="house" value="Slytherin" /></td></tr>
+                    </table>
+                </div>
+		<br />
+		<div id="LOTR" class="question">
+                    <table>
+			<tr><th colspan="2">2. Which race would win in a fight?</th></tr>
+			<tr><td>Dwarf </td>
+			<td> <input type ="radio" name="race" value="Dwarf" /></td>
+                        </tr><tr><td> Hobbit</td>
+			<td><input type ="radio" name="race" value="Halfling" /></td>
+			</tr><tr><td>Human </td>
+			<td> <input type ="radio" name="race" value="Human" /></td>
+			</tr><tr><td>Elf </td>
+			<td> <input type ="radio" name="race" value="Elf" /></td>
+                        </tr><tr><td>Orc </td>
+			<td> <input type ="radio" name="race" value="Orc" /></td>
+			</tr><tr><td>Uruk-Hai </td>
+			<td> <input type ="radio" name="race" value="Uruk-Hai" /></td>
+			</tr>
+                    </table>
+		</div>
+		<br />
+		<div id="star" class="question">
+                    <table>
+                        <tr><th colspan="2">3. Which Jedi would win in a duel?</th><tr>
+			<tr><td>Qui-gon Jinn </td>
+			<td> <input type ="radio" name="jedi" value="Qui-gon Jinn" /></td>
+			</tr><tr><td> Mace Windu</td>
+			<td><input type ="radio" name="jedi" value="Mace Windu" /></td>
+			</tr><tr><td>Yoda </td>
+			<td> <input type ="radio" name="jedi" value="Yoda" /></td>
+			</tr><tr><td>Luke Skywalker </td>
+			<td> <input type ="radio" name="jedi" value="Luke Skywalker" /></td>
+			</tr><tr><td>Obi-wan Kenobi </td>
+			<td> <input type ="radio" name="jedi" value="Obi-wan Kenobi" /></td>
+			</tr><tr><td>Anakin Skywalker </td>
+			<td> <input type ="radio" name="jedi" value="Anakin Skywalker" /></td>
+			</tr>
+                    </table>
+					
+		</div>
+		<br />
+		<div id ="super" class="question">
+                    <table>
+			<tr><th colspan="2">4. Who is the greatest Villain?</th><tr>
+			<tr ><td>Loki </td>
+			<td> <input type ="radio" name="villain" value="Loki" /></td>
+			</tr><tr><td> Magneto</td>
+			<td><input type ="radio" name="villain" value="Magneto" /></td>
+			</tr><tr><td>Emperor Palpatine </td>
+			<td> <input type ="radio" name="villain" value="Emperor Palpatine" /></td>
+			</tr><tr><td>Voldemort </td>
+			<td> <input type ="radio" name="villain" value="Voldemort" /></td>
+			</tr><tr><td>Sauron </td>
+			<td> <input type ="radio" name="villain" value="Sauron" /></td>
+			</tr><tr><td>The Joker </td>
+			<td> <input type ="radio" name="villain" value="The Joker" /></td>
+			</tr>
+                    </table>
+					
+					
+		</div>
+		<br />
+		<input id="submit" type="submit" value="Submit" />
+            </form>
+	</div>
+    </body>
+</html>
