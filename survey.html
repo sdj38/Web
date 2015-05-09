@@ -3,11 +3,14 @@
     <head>
 	<title>Questionairre!</title>
         <link rel="stylesheet" href="survey_style.css">
+         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="validate.js"></script>
     </head>
     <body>
 	<div id="main">
             <h1> Questions of the mind </h1>
-            <form action="results.php" method="POST">
+			
+            <form action="results.php" onsubmit="return validateForm()" method="POST">
                 <div id="HP" class="question">
                     <table>
 			<tr><th colspan="2">1. Which house would you belong to at Hogwarts? </th></tr>
@@ -84,6 +87,9 @@
 		<br />
 		<input id="submit" type="submit" value="Submit" />
             </form>
+			<form action = "results.php" method="post">
+			<input type ="submit" value ="skip to results" id="skip">
+			</form>
 	</div>
     </body>
 </html>
