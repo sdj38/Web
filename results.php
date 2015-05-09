@@ -1,4 +1,4 @@
-
+<!doctype html>
 <html>
     <head>
      <link rel="stylesheet" href="survey_style.css" />
@@ -45,10 +45,7 @@ if($file){
 	echo "creating new results file";
 	$file =fopen("results.txt", "w");
 	if($file){
-        $tally[$house] += 1;
-        $tally[$star] += 1;
-        $tally[$race] += 1;
-        $tally[$villain] += 1;
+        
             foreach($tally as $key => $value){
 		fwrite($file, "$key,$value," .  PHP_EOL);
             }
@@ -61,7 +58,8 @@ if($file){
 	
 echo " <div id='main'> <h1> Results </h1><div class='answer'><table> ";
     foreach($tally as $key => $value){
-        if(!$value === 0){
+        if($value == '0'){
+		}else{
             echo "<tr><td>$key</td><td>$value</td></tr>";
         }       
 	if($key === "Slytherin" || $key === "Uruk-Hai" ||$key === "Obi-wan Kenobi"){
