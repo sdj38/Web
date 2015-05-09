@@ -69,8 +69,9 @@ echo " <div id='main'> <h1> Results </h1><div class='answer'><table> ";
 	}
     }
     echo " </table></div></div>";
-
+if(isset($house) && isset($star) && isset($race) && isset($villain)){
     setcookie("taken", TRUE, time() + (24*24), "/");
+}
 ?>
     </body>
 </html>
