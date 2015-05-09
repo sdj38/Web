@@ -23,3 +23,12 @@ function validateForm(){
 
 
 }
+$( document ).ready(function() {
+    var taken=getCookie("taken");
+    if (taken!= false) {
+        alert("Welcome again" );
+    }else{
+    }
+});
+    
+
