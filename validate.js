@@ -24,9 +24,9 @@ function validateForm(){
 
 }
 $( document ).ready(function() {
-    var taken=getCookie("taken");
-    if (taken!= false) {
-        alert("Welcome again" );
+    var taken=$.cookie('taken');
+    if (taken!== false || taken === null) {
+       window.location.href="results.php";
     }else{
     }
 });
