@@ -10,6 +10,15 @@ border: 5pt solid tan;
 background-image:url("http://colebradburn.com/wp-content/uploads/2012/04/map_background_small-1024x776.jpg");
 
 }
+#skip{
+    display:block;
+margin:auto;
+width:30%;
+}
+p{
+    color:white;
+    text-align:center;
+}
 .answer td{
 background-color:burlywood;
 opacity:.9;
