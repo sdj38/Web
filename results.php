@@ -12,7 +12,7 @@ if(!isset($_COOKIE["taken"])){
     $race =$_POST["race"];
     $villain =  $_POST['villain'];
 }else{
-    echo "already taken the survey";
+    echo "<p>already taken the survey</p>";
 }
 $tally = array('Gryffindor', 'Hufflepuff', 'Ravenclaw' ,'Slytherin',
 'Dwarf','Hobbit','Human','Elf','Orc','Uruk-Hai',
@@ -28,6 +28,7 @@ if($file){
         }
     }
     fclose($file);
+if(isset($house) && isset($star) && isset($race) && isset($villain)){
     if(!isset($_COOKIE["taken"])){
         $tally[$house] += 1;
         $tally[$star] += 1;
@@ -40,6 +41,7 @@ if($file){
 	fclose($file);
 	
     }
+}
 }
     else{
 	echo "creating new results file";
