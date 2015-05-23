@@ -10,7 +10,7 @@
 	#$password = 'password';
 	#$dbname='sandwich_db';
 	try{
-	$conn = new PDO('mysql:host='.$servername.';dbname='.$dbname, $user, $password);
+	$conn = new PDO("mysql:host=$servername:$port;dbname=$dbname", $user, $password);
 	}
 	// Check connection
 	catch (PDOException $e){
