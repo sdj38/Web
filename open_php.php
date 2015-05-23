@@ -6,7 +6,7 @@ $dbHost = "";
   $dbUser = "";
   $dbPassword = "";
 
-     $dbName = 'sandwich_db';
+     $dbName = 'web';
 
      $openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
 
