@@ -15,24 +15,24 @@ $(document).ready(function(){
     $("#about").click(function(){
         $("#inform").slideToggle();
     });
-   $("#home").hover(function(){
-    $("#home").css("background-color", "cornsilk");
+    $("#home").hover(function(){
+        $("#home").css("background-color", "cornsilk");
     }, function(){
-    $("#home").css("background-color", "moccasin");
-});
- $("#about").hover(function(){
-    $("#about").css("background-color", "cornsilk");
+        $("#home").css("background-color", "moccasin");
+    });
+    $("#about").hover(function(){
+        $("#about").css("background-color", "cornsilk");
     }, function(){
-    $("#about").css("background-color", "moccasin");
-});
- $("#home").hover(function(){
-    $("#home").css("background-color", "cornsilk");
+        $("#about").css("background-color", "moccasin");
+    });
+    $("#home").hover(function(){
+        $("#home").css("background-color", "cornsilk");
     }, function(){
-    $("#home").css("background-color", "moccasin");
-});
- $("#ments").hover(function(){
-    $("#ments").css("background-color", "cornsilk");
+        $("#home").css("background-color", "moccasin");
+    });
+    $("#ments").hover(function(){
+        $("#ments").css("background-color", "cornsilk");
     }, function(){
-    $("#ments").css("background-color", "moccasin");
-});
+        $("#ments").css("background-color", "moccasin");
+    });
 });
