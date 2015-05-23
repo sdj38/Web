@@ -11,7 +11,7 @@
 	#$dbname='sandwich_db';
 //echo "host:$servername:$port dbname:$dbname user:$username password:$password<br >\n";
 	try{
-	$conn = new PDO("mysql:host=$servername:$port;dbname=$dbname", $username, $password);
+	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 	}
 	// Check connection
 	catch (PDOException $e){
