@@ -7,6 +7,7 @@ define('DB_PASS',getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
 $dbname = "web";
 
 $dsn = 'mysql:dbname='.$dbname.';host='.DB_HOST.';port='.DB_PORT;
+echo "$dsn DB_USER DB_PASS";
 $conn = new PDO($dsn, DB_USER, DB_PASS);
 
 ?>
