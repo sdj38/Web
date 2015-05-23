@@ -32,7 +32,7 @@ echo "</tr></table>";
 			Bread type
 		<select name="bread" id="selectBread">
 <?php
-	$sql = "SELECT id, name FROM bread order by id";	
+	$sql = "SELECT id, name FROM Bread order by id";	
 	$result = $conn->query($sql);
 	    // output data of each row
 	
