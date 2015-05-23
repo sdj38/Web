@@ -1,21 +1,37 @@
 <?php
-	$servername = getenv('OPENSHIFT_MYSQL_DB_HOST');
-	$username = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
-	$password = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
-	$port = getenv('OPENSHIFT_MYSQL_DB_PORT');
-	$dbname = "sandwich_db";
-	// Create connection
-	#$servername = 'localhost';
-	#$user = 'sdj';
-	#$password = 'password';
-	#$dbname='sandwich_db';
-//echo "host:$servername:$port dbname:$dbname user:$username password:$password<br >\n";
-	try{
-	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-	}
-	// Check connection
-	catch (PDOException $e){
-	echo "error!: " . $e.getMessage();
+
+	
+$dbHost = "";
+  $dbPort = "";
+  $dbUser = "";
+  $dbPassword = "";
+
+     $dbName = "sandwich_db";
+
+     $openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
+
+     if ($openShiftVar === null || $openShiftVar == "")
+     {
+          // Not in the openshift environment
+          //echo "Using local credentials: "; 
+        $dbHost = 'localhost';
+	$dbUser = 'sdj';
+	$dbPassword = 'password';
+	$dbname='sandwich_db';
+     }
+     else 
+     { 
+          // In the openshift environment
+          //echo "Using openshift credentials: ";
+
+          $dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
+          $dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT'); 
+          $dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+          $dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+     } 
+     //echo "host:$dbHost:$dbPort dbName:$dbName user:$dbUser password:$dbPassword<br >\n";
+
+     $db = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPassword);
 	}
 	
 
