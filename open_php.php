@@ -9,6 +9,7 @@
 	#$user = 'sdj';
 	#$password = 'password';
 	#$dbname='sandwich_db';
+echo "host:$servername:$port dbname:$dbname user:$username password:$password<br >\n";
 	try{
 	$conn = new PDO("mysql:host=$servername:$port;dbname=$dbname", $user, $password);
 	}
