@@ -44,12 +44,7 @@ $sql->execute();
 			
 		echo "</table></div>";
 }
-if(!isset($_SESSION['price'])){
-$_SESSION['price'] = $total_price;
-}
-else{
-$_SESSION['price'] += $total_price;
-}
+
 
 echo "<table class ='end'<tr> <td class ='sand'>Total Price </td><td class='sand'>$ ".$total_price."</td></tr><table>";
 

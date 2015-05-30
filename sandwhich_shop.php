@@ -42,7 +42,7 @@ echo "</tr></table>";
 	    // output data of each row
 	
 	    while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-			echo "<option value=".$row['name'].">".$row['name']."</input>";
+			echo "<option value='".$row['name']."'>".$row['name']."</input>";
 	      
 	    }	
 	
@@ -60,7 +60,7 @@ echo "</tr></table>";
 			// output data of each row
 			echo"<div id =".$sammich[$i]." class='hide'><table><th colspan='2'>".$sammich[$i]."s<th><tr>";
 			while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-			if($count %2 == 1){
+			if($count %3 != 0){
 				echo "<td><input type='checkbox' name='".$sammich[$i]."[]' value= '".$row['name']."' />". $row['name']. "</td></input>";
 			}else{
 				echo "</tr><tr>";

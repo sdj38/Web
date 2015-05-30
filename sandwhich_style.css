@@ -56,6 +56,11 @@ width:100%;
 font-size:24pt;
 height:48px;
 }
+#viewer{
+width:100%;
+font-size:24pt;
+height:48px;
+}
 #showMe{
 width:100%;
 font-size:24pt;
@@ -117,7 +122,7 @@ width:20%;
 }
 td{
 font-size: 20pt;
-width:50%;
+width:33%;
 color:white;
 }
 input{
