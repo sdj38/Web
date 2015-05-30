@@ -18,7 +18,7 @@ $query = "INSERT INTO Sandwich (name) VALUES(:name)";
 	$statement->bindParam(':name', $sandwichName);
 	$statement->execute();
 $sandwichId = $conn->lastInsertId();
-$query = "SELECT id FROM Buyer b WHERE b.name ='" .$_SESSION['user_name']."'";
+$query = "SELECT id FROM buyer b WHERE b.name ='" .$_SESSION['user_name']."'";
 $result = $conn->query($query);
 		
 		$row = $result->fetch(PDO::FETCH_ASSOC);

@@ -10,7 +10,7 @@ $_SESSION["user_name"] = $name;
 
 //$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
-$query = "SELECT name FROM Buyer b WHERE b.name ='" .$name."'";
+$query = "SELECT name FROM buyer b WHERE b.name ='" .$name."'";
 	$result = $conn->query($query);
 		
 		$row = $result->fetch(PDO::FETCH_ASSOC);
@@ -23,7 +23,7 @@ $query = "INSERT INTO buyer (name,password) VALUES(:name,:password)";
 	$statement->bindParam(':password', $pwd);
 	$statement->execute();
 	}else{
-	$query = "SELECT password FROM Buyer b WHERE b.name ='" .$name."'";
+	$query = "SELECT password FROM buyer b WHERE b.name ='" .$name."'";
 	$result = $conn->query($query);
 		
 		$row = $result->fetch(PDO::FETCH_ASSOC);

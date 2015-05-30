@@ -12,7 +12,7 @@ include('open_php.php');
 <body>
 </body>
 <?php
-$sql  =$conn->prepare( "select name from sandwich s join delivery d on d.sandwich_id=s.id where d.buyer_id ='".$_SESSION['user_ID']."'");
+$sql  =$conn->prepare( "select name from Sandwich s join Delivery d on d.sandwich_id=s.id where d.buyer_id ='".$_SESSION['user_ID']."'");
 $sql->execute();
 
 // change to Get to add URL for sandwich description

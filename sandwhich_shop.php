@@ -58,7 +58,7 @@ echo "</tr></table>";
 		$sql = "SELECT id, name FROM ". $sammich[$i]. " order by id";
 		$result = $conn->query($sql);
 			// output data of each row
-			echo"<div id =".$sammich[$i]." class='hide'><table><th colspan='2'>".$sammich[$i]."s<th><tr>";
+			echo"<div id =".$sammich[$i]." class='hide'><table><th colspan='3'>".$sammich[$i]."s<th><tr>";
 			while($row = $result->fetch(PDO::FETCH_ASSOC)) {
 			if($count %3 != 0){
 				echo "<td><input type='checkbox' name='".$sammich[$i]."[]' value= '".$row['name']."' />". $row['name']. "</td></input>";

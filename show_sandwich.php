@@ -48,19 +48,7 @@ $sql->execute();
 
 echo "<table class ='end'<tr> <td class ='sand'>Total Price </td><td class='sand'>$ ".$total_price."</td></tr><table>";
 
-//$stmtTopics = $db->prepare('SELECT name FROM topic t'
-	//		. ' INNER JOIN scripture_topic st ON st.topicId = t.id'
-		//	. ' WHERE st.scriptureId = :scriptureId');
 
-//		$stmtTopics->bindParam(':scriptureId', $row['id']);
-
-	//	$stmtTopics->execute();
-
-		// Go through each topic in the result
-		//while ($topicRow = $stmtTopics->fetch(PDO::FETCH_ASSOC))
-		//{
-			//echo $topicRow['name'] . ' ';
-		//}
 ?>
 </div>
 
