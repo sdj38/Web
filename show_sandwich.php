@@ -12,8 +12,8 @@ include('open_php.php')
 </head>
 <body>
 <?php
-$sammich = array("Meat","Cheese","Veggie","Condiment");
-$multiple = array("meats","cheeses","veggies","condiments");
+$sammich = array("Bread","Meat","Cheese","Veggie","Condiment");
+$multiple = array("bread_sandwich","meats","cheeses","veggies","condiments");
 $maxID = "SELECT max(id) from sandwich;";
 
 $length = count($sammich);
