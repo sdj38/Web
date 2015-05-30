@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!doctype = html>
 <?php
 	include 'open_php.php';
@@ -28,6 +32,7 @@ echo "</div></td>";
 }
 echo "</tr></table>";
 ?></div>
+<form action="build_sandwhich.php" method="post">
 			<div class='hide' id='Bread'>
 			Bread type
 		<select name="bread" id="selectBread">
@@ -37,7 +42,7 @@ echo "</tr></table>";
 	    // output data of each row
 	
 	    while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-			echo "<option>".$row['name']."</input>";
+			echo "<option value=".$row['name'].">".$row['name']."</input>";
 	      
 	    }	
 	
@@ -56,20 +61,26 @@ echo "</tr></table>";
 			echo"<div id =".$sammich[$i]." class='hide'><table><th colspan='2'>".$sammich[$i]."s<th><tr>";
 			while($row = $result->fetch(PDO::FETCH_ASSOC)) {
 			if($count %2 == 1){
-				echo "<td><input type='checkbox' name=".$sammich[$i]." value=".$row['name']."/>". $row['name']. "</td></input>";
+				echo "<td><input type='checkbox' name='".$sammich[$i]."[]' value= '".$row['name']."' />". $row['name']. "</td></input>";
 			}else{
 				echo "</tr><tr>";
-				echo "<td><input type='checkbox' name=".$sammich[$i]." value=".$row['name']."/>". $row['name']. "</td></input>";
+				echo "<td><input type='checkbox' name='".$sammich[$i]."[]' value='".$row['name']."' />". $row['name']. "</td></input>";
 			}
 			$count ++;
 			}
 			$count = 0;
 		echo "</table></div>";
 	}
+	
 ?>
+
+
 <br/>
 	<div id="results">
 		<table>
+		<?php
+		echo "<tr><th colspan='2'>".$_SESSION['user_name']."'s Sandwich</th></tr>"; 
+		?>
 		<tr>
 		<td>Bread type: </td>
 			<td id="bread_row"></td>
@@ -82,11 +93,14 @@ echo "</tr></table>";
 			<td id="veggie_row"></td>
 			</tr><tr><td>Condiments:</td>
 			<td id="condiment_row"></td>
-			</tr>
+			</tr><tr><td><input type ="button" value="Show Sandwiches" id="showMe" onclick="document.location.href='sandwiches.php'" />
+			</td>
+		<td><input type="submit" value="Build Sandwich" id ="build"/></td>
+		</tr>
 		</table>
 		
-		<button value="button" id="build">Build Sandwich </button>
+		
 	</div>
-
+</form>
 	</body>
 </html>

@@ -6,6 +6,7 @@
     </head>
     <body>
 <?php
+// if a cookie taken is not set gather the information
 if(!isset($_COOKIE["taken"])){
     $house = $_POST["house"];
     $star = $_POST["jedi"];
@@ -14,11 +15,15 @@ if(!isset($_COOKIE["taken"])){
 }else{
     echo "<p>already taken the survey</p>";
 }
+// array to hold all the keys for the results
 $tally = array('Gryffindor', 'Hufflepuff', 'Ravenclaw' ,'Slytherin',
 'Dwarf','Hobbit','Human','Elf','Orc','Uruk-Hai',
 'Qui-gon Jinn','Yoda','Mace Windu','Luke Skywalker', 'Anakin Skywalker', 'Obi-wan Kenobi',
 'Loki','Magento','Emperor Palpatine','Voldemort','Sauron','The Joker');
+// set the value of all to 0
 $tally = array_fill_keys($tally, 0);
+
+// read the existing results from the file
 $file = fopen("results.txt","r");
 if($file){
     while ($line = fgets($file)){
@@ -28,6 +33,7 @@ if($file){
         }
     }
     fclose($file);
+// if all the answers are submitted increment the results
 if(isset($house) && isset($star) && isset($race) && isset($villain)){
     if(!isset($_COOKIE["taken"])){
         $tally[$house] += 1;
@@ -43,6 +49,7 @@ if(isset($house) && isset($star) && isset($race) && isset($villain)){
     }
 }
 }
+//create new file to save the data
     else{
 	echo "creating new results file";
 	$file =fopen("results.txt", "w");
@@ -57,7 +64,7 @@ if(isset($house) && isset($star) && isset($race) && isset($villain)){
             echo "unable to write to file";
 	}
     }
-	
+// display the data in multiple tables	
 echo " <div id='main'> <h1> Results </h1><div class='answer'><table> ";
     foreach($tally as $key => $value){
         if($value == '0'){
@@ -70,6 +77,7 @@ echo " <div id='main'> <h1> Results </h1><div class='answer'><table> ";
     }
     echo " </table></div></div>";
 if(isset($house) && isset($star) && isset($race) && isset($villain)){
+    //set the cookie to true
     setcookie("taken", TRUE, time() + (24*24), "/");
 }
 ?>

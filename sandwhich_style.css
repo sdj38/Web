@@ -5,7 +5,11 @@ border: 2pt solid black;
 color: white;
 text-align:center;
 border-radius: 0px;
-font-size:32pt;
+font-size:36pt;
+}
+#sub{
+width:auto;
+margin: auto;
 }
 #banner{
 background-image: url("banner.png");
@@ -30,9 +34,48 @@ border: 1pt solid black;
 border-radius:0px;
 
 }
+.log_input{
+width: auto;
+margin: auto;
+
+}
+.log{
+width:auto;
+margin:auto;
+font-size:16pt;
+}
+#main_end{
+width:75%;
+margin:auto;
+}
+th{
+background-color:brown;
+}
 #build{
 width:100%;
 font-size:24pt;
+height:48px;
+}
+#showMe{
+width:100%;
+font-size:24pt;
+height:48px;
+}
+.sand{
+width: 25%;
+margin: auto;
+}
+#end_banner{
+width:65%;
+margin:auto;
+color:white;
+font-size:18pt;
+
+}
+.end{
+border: 3pt solid black;
+width:65%;
+margin:auto;
 }
 body{
 background-color:darkslategray;
@@ -45,6 +88,11 @@ border: 2pt solid black;
 border-radius: 0px;
 font-size:24pt;
 color:white;
+}
+#first{
+width:auto;
+margin:auto;
+border: 3pt solid black;
 }
 table{
 width:100%;
