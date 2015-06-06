@@ -9,7 +9,7 @@ $name = $_POST['user'];
 $pwd = $_POST['pswd'];
 $_SESSION["user_name"] = $name;
 
- $password = password_hash($pswd, PASSWORD_DEFAULT);
+ $password = password_hash($pwd, PASSWORD_DEFAULT);
 $query = "INSERT INTO buyer (name,password) VALUES(:name,:password)";
 	$statement = $conn->prepare($query);
 	$statement->bindParam(':name', $name);

@@ -6,12 +6,12 @@ require("password.php");
 	<head>
 	 <link rel="stylesheet" href="sandwhich_style.css">
          <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		  <script src="login2.js"></script>
+		 
 		  
         
 	</head>
 	<body>
-		<form action="check_user.php" method="POST" onsubmit="return confirmation()">
+		<form action="check_user.php" method="POST" >
 		<table class ="first"><th colspan="2">Login</th>
 		
 			<tr><td class ="log">Name: </td><td class ="log"><input type="text" name="user" class="log_input" /></td></tr> <br/>
