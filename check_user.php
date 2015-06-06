@@ -1,6 +1,7 @@
 <?php
 session_start();
  include("open_php.php");
+ require("password.php");
 ?>
 <?php
 $name = $_POST['user'];
