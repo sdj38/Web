@@ -19,9 +19,7 @@ $query = "SELECT name FROM buyer b WHERE b.name ='" .$name."'";
 		$row = $result->fetch(PDO::FETCH_ASSOC);
 		$value = $row['name'];
 		//echo "$value";
-		if($value == ""){
-		die();
-		}else{
+		
 		$query = "SELECT password FROM buyer b WHERE b.name ='" .$name."'";
 	$result = $conn->query($query);
 		
@@ -40,7 +38,7 @@ $query = "SELECT name FROM buyer b WHERE b.name ='" .$name."'";
  
 }
 		 
-		}
+		
 		
 		
 	
