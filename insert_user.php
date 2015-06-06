@@ -3,6 +3,7 @@ session_start();
  include("open_php.php");
 ?>
 <?php
+echo "made it here";
 $name = $_POST['user'];
 $pwd = $_POST['pswd'];
 $_SESSION["user_name"] = $name;
