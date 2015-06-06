@@ -13,7 +13,7 @@ namespace {
         /**
          * PHPUnit Process isolation caches constants, but not function declarations.
          * So we need to check if the constants are defined separately from 
-         * the functions to enable supporting process isolation in userland
+         * the functions to enable supporting process isolation in user
          * code.
          */
         define('PASSWORD_BCRYPT', 1);
