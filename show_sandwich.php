@@ -12,16 +12,20 @@ include('open_php.php')
 </head>
 <body>
 <?php
+
 $sammich = array("Bread","Meat","Cheese","Veggie","Condiment");
 $multiple = array("bread_sandwich","meats","cheeses","veggies","condiments");
 $maxID = "SELECT max(id) from sandwich;";
-
+$id = $_POST['checkSandwich'];
+if(isset($id) && $id != ""){
+$_SESSION['sandID'] = $id;
+}
 $length = count($sammich);
 ?>
 <div id="main_end">
 
 <?php
-echo "<div id='end_banner'><h1>". $_SESSION['user_name'] ."s Sandwich </h1> </div>"; 
+echo "<div id='end_banner'><h1>". $_SESSION['user_name'] ."'s Sandwich </h1> </div>"; 
 $total_price = 0;
 for($i = 0; $i < $length; $i++){
 $count = 0;
@@ -42,11 +46,15 @@ $sql->execute();
 			$count = 0;
 			
 			
-		echo "</table></div>";
 }
 
 
-echo "<table class ='end'<tr> <td class ='sand'>Total Price </td><td class='sand'>$ ".$total_price."</td></tr><table>";
+echo "<table class ='end'<tr> <td class ='sand'>Price :</td><td class='sand'>$ ".$total_price."</td></tr></table><table class='end'>
+		<tr><td><input type ='button' value='Show Sandwiches' id='showMe' onclick=document.location.href='sandwiches.php' />
+		</td>
+		<td><input type ='button' value='Build Another' id='showMe' onclick=document.location.href='sandwhich_shop.php' /></td>
+		</tr>
+		</table></div><table>";
 
 
 ?>

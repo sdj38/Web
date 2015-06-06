@@ -51,7 +51,7 @@ margin:auto;
 th{
 background-color:brown;
 }
-#build{
+.build{
 width:100%;
 font-size:24pt;
 height:48px;
@@ -81,9 +81,10 @@ font-size:18pt;
 border: 3pt solid black;
 width:65%;
 margin:auto;
+background-color:#999966;
 }
 body{
-background-color:darkslategray;
+background-color:#669999;
 }
 .hide{
 background-color: #999966;
@@ -94,10 +95,11 @@ border-radius: 0px;
 font-size:24pt;
 color:white;
 }
-#first{
+.first{
 width:auto;
 margin:auto;
 border: 3pt solid black;
+background-color:#999966;
 }
 table{
 width:100%;

@@ -11,13 +11,7 @@ $bread = $_POST['bread'];
 $totalPrice = 0;
 $sammich = array("Meat","Cheese","Veggie","Condiment");
 
-$sandwichName = $bread ." with ". $meat[0];
-$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-$query = "INSERT INTO Sandwich (name) VALUES(:name)";
-	$statement = $conn->prepare($query);
-	$statement->bindParam(':name', $sandwichName);
-	$statement->execute();
-$sandwichId = $conn->lastInsertId();
+
 $query = "SELECT id FROM buyer b WHERE b.name ='" .$_SESSION['user_name']."'";
 $result = $conn->query($query);
 		
@@ -26,7 +20,13 @@ $result = $conn->query($query);
 		$_SESSION['user_ID'] = $userID;
 		echo "$value";
 
-
+$sandwichName = $bread ." with ". $meat[0]. " (". $_SESSION['user_ID'].")";
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+$query = "INSERT INTO Sandwich (name) VALUES(:name)";
+	$statement = $conn->prepare($query);
+	$statement->bindParam(':name', $sandwichName);
+	$statement->execute();
+$sandwichId = $conn->lastInsertId();
 $query = "INSERT INTO Delivery (buyer_id, sandwich_id) VALUES(:buyer_id, :sandwich_id)";
 	$statement = $conn->prepare($query);
 	$statement->bindParam(':buyer_id', $userID);

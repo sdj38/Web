@@ -95,7 +95,7 @@ echo "</tr></table>";
 			<td id="condiment_row"></td>
 			</tr><tr><td><input type ="button" value="Show Sandwiches" id="showMe" onclick="document.location.href='sandwiches.php'" />
 			</td>
-		<td><input type="submit" value="Build Sandwich" id ="build"/></td>
+		<td><input type="submit" value="Build Sandwich" class ="build"/></td>
 		</tr>
 		</table>
 		

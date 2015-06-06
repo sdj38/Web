@@ -7,35 +7,22 @@ $name = $_POST['user'];
 $pwd = $_POST['pswd'];
 $_SESSION["user_name"] = $name;
 
+ $password = password_hash($pswd, PASSWORD_DEFAULT);
 
+//if (password_verify('bad-password', $passwordHash)) {
+    // Correct Password
+//} else {
+    // Wrong password
+//}
 //$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
-$query = "SELECT name FROM buyer b WHERE b.name ='" .$name."'";
-	$result = $conn->query($query);
-		
-		$row = $result->fetch(PDO::FETCH_ASSOC);
-		$value = $row['name'];
-		//echo "$value";
-if($value == ""){	
+
 $query = "INSERT INTO buyer (name,password) VALUES(:name,:password)";
 	$statement = $conn->prepare($query);
 	$statement->bindParam(':name', $name);
-	$statement->bindParam(':password', $pwd);
+	$statement->bindParam(':password', $password);
 	$statement->execute();
-	}else{
-	$query = "SELECT password FROM buyer b WHERE b.name ='" .$name."'";
-	$result = $conn->query($query);
-		
-		$row = $result->fetch(PDO::FETCH_ASSOC);
-		$value = $row['password'];
-		if($value != $pwd){
-		 echo "incorrect password!";
-		 header("Location: login.php");
-		 $_SESSION['msg'] = "Incorrect password!";
-		 die();
-		}
-		
-		}
+	
 	
 	$_SESSION['msg'] = "";
 	header("Location: sandwhich_shop.php");

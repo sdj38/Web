@@ -5,7 +5,7 @@ var forward = true;
 		alert("passwords dont match");
 		forward = false;
 	}
-	if($("input[name='user']").val() == ""){
+	if($("input[name='user']").val == ""){
 	alert("please enter a user name");
 		forward = false;
 	}
