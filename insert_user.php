@@ -1,9 +1,10 @@
 <?php
 session_start();
  include("open_php.php");
+ require("password.php");
 ?>
 <?php
-echo "made it here";
+
 $name = $_POST['user'];
 $pwd = $_POST['pswd'];
 $_SESSION["user_name"] = $name;
