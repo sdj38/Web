@@ -25,7 +25,7 @@ $query = "SELECT name FROM buyer b WHERE b.name ='" .$name."'";
 		
 		$row = $result->fetch(PDO::FETCH_ASSOC);
 		$value = $row['password'];
-		if (password_verify($pswd, $value)) {
+		if (password_verify($pswd, $value) == true) {
 		$_SESSION['msg'] = "";
 		header("Location: sandwhich_shop.php");
 		die(); 
