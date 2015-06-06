@@ -25,11 +25,11 @@ $query = "SELECT name FROM buyer b WHERE b.name ='" .$name."'";
 		
 		$row = $result->fetch(PDO::FETCH_ASSOC);
 		$value = $row['password'];
-		if (password_verify($pswd, $value) == true) {
+		if (password_verify($pwd, $value) == true) {
 		$_SESSION['msg'] = "";
 		header("Location: sandwhich_shop.php");
 		die(); 
-    // Correct Password
+    
 		} else {
 		 echo "incorrect password!";
 		 header("Location: signin.php");
